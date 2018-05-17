@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>MyWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>TestPersonServlet1</servlet-name>
+    <servlet-class>servletTest.chap2.TestPersonServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestPersonServlet1</servlet-name>
+    <url-pattern>/testPerson1.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TestPersonServlet3</servlet-name>
+    <servlet-class>servletTest.chap2.TestPersonServlet3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestPersonServlet3</servlet-name>
+    <url-pattern>/testPerson3.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>TestPersonServlet4</servlet-name>
+    <servlet-class>servletTest.chap2.TestPersonServlet4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestPersonServlet4</servlet-name>
+    <url-pattern>/testPerson4.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PersonForm</servlet-name>
+    <servlet-class>standardActionStudy.test.PersonForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PersonForm</servlet-name>
+    <url-pattern>/7personForm.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PersonFormEnd</servlet-name>
+    <servlet-class>standardActionStudy.test.PersonFormEnd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PersonFormEnd</servlet-name>
+    <url-pattern>/7personFormEnd.do</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>MyFilter</filter-name>
+  	<filter-class>util.filter.MyFilter</filter-class>
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>MyFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <error-page>
+  	<exception-type>java.lang.NumberFormatException</exception-type>
+  	<location>/exception/numberError.jsp</location>
+  </error-page>
+  
+  
+</web-app>
